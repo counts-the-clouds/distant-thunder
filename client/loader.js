@@ -18,8 +18,8 @@ window.Loader = (function() {
   // files of the wrapped application.
   function startLoading() {
     try {
-      appendItem(`Loading from ${ROOT}/${Configuration.application}`);
-      const manifest = require(`${ROOT}/${Configuration.application}/manifest.json`);
+      appendItem(`Loading from ${ROOT}/application`);
+      const manifest = require(`${ROOT}/application/manifest.json`);
       loadAll(manifest.fileList).then(finishLoading);
     }
     catch(error) {
@@ -50,7 +50,7 @@ window.Loader = (function() {
 
       for (const file of fileList) {
         appendItem(`    - ${file}`);
-        await import(`../${Configuration.application}/${file}`);
+        await import(`../application/${file}`);
       }
 
       resolve();

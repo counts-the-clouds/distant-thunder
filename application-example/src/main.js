@@ -8,7 +8,7 @@ global.Main = function() {
   console.log("   Environment",Environment);
   console.log("   Configuration",Configuration);
 
-  window.APP = `${ROOT}/${Configuration.application}`;
+  window.APP = `${ROOT}/application`;
 
   try {
     const mainContent = readFile('views/main-content.html');

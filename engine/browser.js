@@ -10,16 +10,15 @@ global.Browser = (function() {
 
   function createWindow() {
 
-    const myApplication = Configuration.application;
-    const myWindow = Configuration.browserWindow;
+    const bw = Configuration.browserWindow;
 
     $mainWindow = new Electron.BrowserWindow({
-      title: myWindow.title,
-      icon: `${ROOT}/${myApplication}/${myWindow.icon}`,
-      width: myWindow.width,
-      height: myWindow.height,
-      minWidth: myWindow.minWidth,
-      minHeight: myWindow.minHeight,
+      title: Configuration.name,
+      icon: `${ROOT}/application/${bw.icon}`,
+      width: bw.width,
+      height: bw.height,
+      minWidth: bw.minWidth,
+      minHeight: bw.minHeight,
 
       webPreferences: {
         contextIsolation: false,
