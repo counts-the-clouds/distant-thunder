@@ -33,8 +33,8 @@ window.Loader = (function() {
   // been loaded by one of the manifest files.
   function finishLoading() {
     try {
-      // resetDocument();
-      // Main();
+      resetDocument();
+      Main();
     } catch(error) {
       appendError(error);
     }

@@ -3,7 +3,7 @@ global.Configuration = {
   application: 'example',
 
   browserWindow: {
-    title: 'Example Application',
+    title: 'Distant Thunder',
     icon: 'assets/icon.png',
     width: 1920,
     height: 1080,
