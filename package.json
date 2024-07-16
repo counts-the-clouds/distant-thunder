@@ -1,0 +1,42 @@
+{
+  "name": "distant-thunder",
+  "version": "0.0.0",
+  "description": "An Electron Application Wrapper",
+  "author": "Counts The Clouds",
+  "homepage": "https://water-through-fog.com/",
+
+  "main": "main.js",
+
+  "build": {
+    "appId": "com.water-through-fog.distant-thunder",
+    "win": {
+      "target": [
+        {
+          "target": "portable",
+          "arch": [
+            "x64"
+          ]
+        }
+      ]
+    }
+  },
+
+  "scripts": {
+    "dist": "electron-builder",
+    "start": "electron . --development"
+  },
+
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/counts-the-clouds/distant-thunder.git"
+  },
+
+  "keywords": [
+    "electron"
+  ],
+
+  "devDependencies": {
+    "electron": "^31.2.1",
+    "electron-builder": "24.13.3"
+  }
+}
