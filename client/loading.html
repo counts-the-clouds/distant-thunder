@@ -2,6 +2,11 @@
 
 <html>
   <head>
+    <meta http-equiv="Content-Security-Policy" content="
+      default-src 'unsafe-inline' data: file: blob: 'self';
+      script-src  'unsafe-eval'   data: file: blob: 'self'
+    "/>
+
     <style type="text/css">
       #loading {
         position: absolute;
