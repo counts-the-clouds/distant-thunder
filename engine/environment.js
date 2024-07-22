@@ -1,3 +1,5 @@
+const os = require('os');
+
 global.Environment = (function() {
 
   function getName() { return ENVIRONMENT; }
@@ -10,6 +12,9 @@ global.Environment = (function() {
       name: ENVIRONMENT,
       isDevelopment: isDevelopment(),
       isProduction: isProduction(),
+      isMac: (os.platform() === "darwin"),
+      isWindows: (os.platform() === "win32"),
+      isLinux: (os.platform() === "linux"),
     };
   }
 
@@ -21,3 +26,4 @@ global.Environment = (function() {
   }
 
 })();
+
